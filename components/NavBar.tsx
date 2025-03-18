@@ -25,7 +25,7 @@ const NavBar = () => {
           <Link href={"/cart"} className="flex items-center">
             <ShoppingCart className="h-6 w-6" />
             {totalItems > 0 && (
-              <span className="absolute top-10 right-0 bg-primary text-primary-foreground text-[10px] font-bold rounded-full h-5 w-5 flex items-center justify-center">
+              <span className="absolute top-2 right-5 bg-primary text-primary-foreground text-[10px] font-bold rounded-full h-5 w-5 flex items-center justify-center">
                 {totalItems}
               </span>
             )}
