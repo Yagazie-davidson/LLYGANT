@@ -5,6 +5,10 @@ export default function Home() {
   const products: Product[] = [
     { id: 1, name: "Black", image: "/images/Black ++.png", price: 250000 },
     { id: 2, name: "White", image: "/images/White ++.png", price: 250000 },
+    { id: 2, name: "New", image: "/images/4.png", price: 250000 },
+    { id: 2, name: "New", image: "/images/3.png", price: 250000 },
+
+
   ];
   return (
     <div>
@@ -15,7 +19,7 @@ export default function Home() {
           Products
         </h2>
       </div>
-      <section className="flex px-6">
+      <section className="px-6 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 self-center">
         {products.map((product, index) => (
           <div key={index}>
             <ProductCard
