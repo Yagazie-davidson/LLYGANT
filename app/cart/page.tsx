@@ -4,12 +4,14 @@ import CartItems from "@/components/CartItems";
 const page = () => {
   return (
     <div>
-      <div className="h-10"></div>
+      <div className="h-14"></div>
 
       <div className="flex items-center justify-between px-4">
-        <h2 className="font-normal text-[40px] tracking-[0.6px]">Your Cart</h2>
+        <h2 className="font-normal text-[28px] sm:text-[40px] tracking-[0.6px]">
+          Your Cart
+        </h2>
         <Link
-          href={"/"}
+          href={"/products"}
           className="text-[16px] font-normal hover:font-semibold tracking-[0.6px] text-black underline"
         >
           Continue Shopping

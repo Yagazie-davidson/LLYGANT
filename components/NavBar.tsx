@@ -1,16 +1,17 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
-import { ShoppingCart } from "lucide-react";
+import React, { useState } from "react";
+import { Menu, ShoppingCart, X } from "lucide-react";
 import { useCartStore } from "@/lib/store";
 
 const NavBar = () => {
   const { totalItems } = useCartStore();
+  const [openHam, setOpenHam] = useState(false);
   return (
     <div className="flex justify-between items-center px-6 pt-3.5">
-      <div className="bg-white p-3.5 flex  border border-black">
-        <Link href="/" className="">
+      <div className="bg-white items-center  flex  border border-black">
+        <Link href="/" className=" border-r border-black">
           <Image
             src="/images/PADI LIFESTYLE LOGO.png"
             alt="logo"
@@ -19,6 +20,9 @@ const NavBar = () => {
             priority
           />
         </Link>
+        <div className="cursor-pointer">
+          {!openHam ? <Menu size={20} /> : <X />}
+        </div>
       </div>
       <div className="flex items-center justify-end bg-white border border-black p-2">
         <div className="block">
